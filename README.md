@@ -41,13 +41,13 @@ Ransomware (not tested)
  - 2 - Restarts the machnie
  - 3 - Logs out of the machine
  
- IP
+ IP (tested)
  -
  ![](https://github.com/crafter544/Images/blob/main/MrManX%20images/IP%20.png)
  
  - 1 - Gets the IP of the machine
  
- Random Crap
+ Random Crap (Parts have been tested)
  -
  ![](https://github.com/crafter544/Images/blob/main/MrManX%20images/Random%20Crap.png)
  
