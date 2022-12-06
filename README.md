@@ -51,11 +51,11 @@ Ransomware (not tested)
  -
  ![](https://github.com/crafter544/Images/blob/main/MrManX%20images/Random%20Crap.png)
  
- - 1 - Basically it deletes everything
- - 2 - Spams Endless tabs of Po*nhub untill pc crashes or MrManX is closes
- - 3 - Makes as many as you want MrManX files
- - 4 - A web version of the 'You are a Idiot' virus
- - 5 - gets data from Phone Numbers that have been inputed by the user
+ - 1 - Basically it deletes everything (not tested)
+ - 2 - Spams Endless tabs of Po*nhub untill pc crashes or MrManX is closes (tested)
+ - 3 - Makes as many as you want MrManX files (tested)
+ - 4 - A web version of the 'You are a Idiot' virus(tested)
+ - 5 - gets data from Phone Numbers that have been inputed by the user (tested)
  ![](https://github.com/crafter544/Images/blob/main/MrManX%20images/Phone%20Number%20Info%20Base.png)
 
 Help Center 
